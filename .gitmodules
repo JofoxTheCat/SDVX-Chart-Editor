@@ -1,0 +1,3 @@
+[submodule "external/SDVX-Chart-Converter"]
+	path = external/SDVX-Chart-Converter
+	url = https://github.com/JofoxTheCat/SDVX-Chart-Converter

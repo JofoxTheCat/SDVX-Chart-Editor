@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Generates the fallback glyph stores in src/SDVXEditor.Resources/Fonts from pinned, OFL-licensed
+    Noto fonts (see docs/FONTS.md). Build-time tool only: nothing of it ships with the editor, and it
+    is deliberately NOT part of SDVXEditor.sln, so a normal build never restores its packages.
+
+      dotnet run -c Release --project tools/FontGen
+
+    Dependencies (licences checked 2026-10-25):
+      SixLabors.Fonts / SixLabors.ImageSharp(.Drawing) - Six Labors Split License 1.0 (Apache-2.0 for
+        open-source, transitive and small-revenue use; ImageSharp itself is already a dependency of
+        osu-framework). Used only to rasterise outlines here.
+      SharpFNT 2.0.0 - MIT. The same library osu-framework reads the .bin files with.
+      ppy.osu.Framework - MIT. Referenced without assets, only so the tool can read the embedded Roboto
+        metrics it has to match (same version as the editor via $(OsuFrameworkVersion)).
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SDVXEditor.Tools.FontGen</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.7" />
+    <PackageReference Include="SharpFNT" Version="2.0.0" />
+    <PackageReference Include="ppy.osu.Framework" Version="$(OsuFrameworkVersion)" ExcludeAssets="all" GeneratePathProperty="true" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyMetadata Include="OsuFrameworkDll" Value="$(PkgPpy_osu_Framework)\lib\net8.0\osu.Framework.dll" />
+  </ItemGroup>
+</Project>

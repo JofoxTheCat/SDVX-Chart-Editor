@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Chart model and file formats. Must stay free of any osu-framework dependency. -->
+  <PropertyGroup>
+    <RootNamespace>SDVXEditor.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The VOX export host travels with Core, so every app/test output has python/vox_host.py
+         next to it. The converter itself is NOT copied: it is found in the submodule or set by the user. -->
+    <None Include="..\..\python\vox_host.py" Link="python\vox_host.py" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Level-estimation coefficients written by tools/DifficultyCalibrator. Optional: without the
+         file the estimator falls back to a built-in rough model. -->
+    <EmbeddedResource Include="Difficulty\coefficients.json" LogicalName="SDVXEditor.Core.Difficulty.coefficients.json"
+                      Condition="Exists('Difficulty\coefficients.json')" />
+    <!-- Skill-radar model written by the same tool (per-axis linear terms + trees over Patterns/ features).
+         Optional: without it the editor shows the classic radar (radar.py port). -->
+    <EmbeddedResource Include="Radar\radar_model.json" LogicalName="SDVXEditor.Core.Radar.radar_model.json"
+                      Condition="Exists('Radar\radar_model.json')" />
+  </ItemGroup>
+</Project>

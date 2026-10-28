@@ -1,0 +1,31 @@
+# .NET build output
+bin/
+obj/
+[Bb]uild/
+[Oo]ut/
+artifacts/
+publish/
+*.nupkg
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userprefs
+*.DotSettings.user
+
+# Test results
+TestResults/
+*.trx
+
+# Bundled Python runtime (fetched by tools/fetch_python.ps1)
+python/runtime/
+
+# Release packages (tools/publish_release.py)
+release/
+
+# OS
+Thumbs.db
+.DS_Store

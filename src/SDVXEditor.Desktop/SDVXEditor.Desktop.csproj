@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SDVXEditor.Desktop</RootNamespace>
+    <AssemblyName>SDVXEditor</AssemblyName>
+  </PropertyGroup>
+  <!-- No console window on Windows; Linux/macOS keep a plain Exe. Decided by the target RID when there is one,
+       so a linux-x64 release published on Windows stays an Exe (tools/publish_release.py). -->
+  <PropertyGroup Condition="('$(RuntimeIdentifier)' == '' And $([MSBuild]::IsOSPlatform('Windows'))) Or $(RuntimeIdentifier.StartsWith('win'))">
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SDVXEditor.Game\SDVXEditor.Game.csproj" />
+  </ItemGroup>
+</Project>

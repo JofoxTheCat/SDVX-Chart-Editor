@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>SDVXEditor.Game</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ppy.osu.Framework" Version="$(OsuFrameworkVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SDVXEditor.Core\SDVXEditor.Core.csproj" />
+    <ProjectReference Include="..\SDVXEditor.Resources\SDVXEditor.Resources.csproj" />
+  </ItemGroup>
+</Project>

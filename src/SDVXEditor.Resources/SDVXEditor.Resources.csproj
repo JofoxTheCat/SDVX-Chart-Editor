@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Embedded resources read through osu-framework's DllResourceStore.
+    Resource names resolve as "<AssemblyName>.<Folder>.<File>", so a file at
+    Textures/foo.png is requested as "Textures/foo.png".
+    Only own assets here: no osu! skin files, no Konami files.
+  -->
+  <PropertyGroup>
+    <RootNamespace>SDVXEditor.Resources</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\**\*" />
+    <EmbeddedResource Include="Textures\**\*" />
+    <EmbeddedResource Include="Samples\**\*" />
+    <EmbeddedResource Include="Tutorial\**\*" />
+    <EmbeddedResource Include="Credits\**\*" />
+    <EmbeddedResource Include="Shaders\**\*" />
+  </ItemGroup>
+</Project>

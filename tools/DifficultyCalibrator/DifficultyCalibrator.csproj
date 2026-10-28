@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Fits the level-estimation coefficients from the user's OWN game install. Nothing it reads is
+       copied anywhere; it writes aggregate coefficients (coefficients.json) only. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SDVXEditor.Tools.DifficultyCalibrator</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SDVXEditor.Core\SDVXEditor.Core.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,40 @@
+{
+  // The main tutorial's song (docs/TUTORIAL.md: "Main tutorial"). Measures are 0-based, 4/4, constant tempo.
+  // Timing: 235 BPM, first downbeat 681.6 ms (onset analysis; rounded to whole ms). Sections from the song's energy.
+  // The chart the tutorial rebuilds is solution.kson in this folder once it ships (the mapper's chart); without it
+  // the placeholder in Core Tutorial/Main/MainTutorialCharts.cs is used. Exercise windows: see the docs' table.
+  "title": "[REDACTED] (Cut Ver.)",
+  "artist": "Fax",
+  "charter": "Tutorial",
+  "audio": "tutorial.mp3",
+  "offsetMs": 682,
+  "bpm": 235,
+  "measures": 48,
+  "previewMs": 16001,
+  "license": "Music: Fax - [REDACTED] (Cut Ver.), used with the artist's permission (not covered by the editor's licence). soundcloud.com/fax0508",
+  "songSources": [ "https://soundcloud.com/fax0508" ],
+  "sections": [
+    { "name": "intro", "measure": 0 },
+    { "name": "fill", "measure": 7, "colour": "#ffb84d" },
+    { "name": "build-up", "measure": 8 },
+    { "name": "drop", "measure": 15, "colour": "#ff5a5a" },
+    { "name": "last hit", "measure": 47, "colour": "#9b59ff" }
+  ],
+  "drop": 15,
+  "dropSpeed": 1.25,
+  "exercises": {
+    "chips": { "from": 0, "to": 1 },
+    "holds": { "from": 2, "to": 3 },
+    "fxChips": { "from": 3, "to": 4 },
+    "fxHold": { "from": 4, "to": 5 },
+    "chipPractice": { "from": 5, "to": 6 },
+    "holdModifier": { "from": 6, "to": 6.5 },
+    "holdResize": { "from": 6.5, "to": 7 },
+    "slam": { "from": 7, "to": 8 },
+    "straightLaser": { "from": 8, "to": 9 },
+    "curveLaser": { "from": 9, "to": 10 },
+    "wideLaser": { "from": 10, "to": 11 },
+    "laserPractice": { "from": 11, "to": 13 },
+    "finalPractice": { "from": 15, "to": 19 }
+  }
+}

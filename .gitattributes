@@ -1,0 +1,7 @@
+* text=auto
+*.vox -text
+*.ksh -text
+*.png binary
+*.bin binary
+*.mp3 binary
+*.ogg binary

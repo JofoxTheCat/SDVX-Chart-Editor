@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Generates the tutorial's placeholder song (src/SDVXEditor.Resources/Tutorial/tutorial.ogg) from
+    tutorial.json: drums, bass, lead, a quiet breakdown and the tempo change, all synthesised - no samples,
+    nothing third-party. Build-time tool only, deliberately NOT part of SDVXEditor.sln.
+
+      dotnet run -c Release (project: tools/TutorialSongGen)
+
+    Needs ffmpeg with libvorbis on PATH for the .ogg (without it the .wav is left next to it).
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SDVXEditor.Tools.TutorialSongGen</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+</Project>

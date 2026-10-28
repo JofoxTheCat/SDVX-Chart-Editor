@@ -1,0 +1,22 @@
+Third-party components in the SDVX Chart Editor release packages
+=================================================================
+
+- .NET runtime 9 (Microsoft) - MIT License. Included in self-contained builds.
+- osu!framework (ppy Pty Ltd) - MIT License. https://github.com/ppy/osu-framework
+  Brings the BASS audio library (un4seen.com, free for non-commercial use), SDL,
+  FFmpeg libraries and the other dependencies listed in its repository.
+- Roboto (Christian Robertson / Google) - Apache License 2.0, embedded in osu!framework.
+- Noto Sans, Noto Sans JP (Google / Adobe) - SIL Open Font License 1.1.
+  https://openfontlicense.org (licence text: OFL.txt beside the fonts in the source).
+- ImageSharp (Six Labors) - Six Labors Split License 1.0 (Apache 2.0 terms).
+- SDVX-Chart-Converter / ksh2vox (JofoxTheCat) - MIT License,
+  folder external/SDVX-Chart-Converter. Its classic skill radar formulas come from
+  kshoot-tools (MIT License).
+- Windows builds: Python embeddable distribution (Python Software Foundation License,
+  python/runtime/LICENSE.txt) with Pillow (MIT-CMU License).
+- Tutorial song "[REDACTED] (Cut Ver.)" by Fax (https://soundcloud.com/fax0508) -
+  used with the artist's permission for the editor tutorial only.
+  Not licensed for any other use.
+
+SOUND VOLTEX is a trademark of Konami. This editor is an unofficial fan tool and
+contains no Konami game files.

@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Version>0.1.0</Version>
+    <Authors>JofoxTheCat</Authors>
+    <Product>SDVX Chart Editor</Product>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Newest ppy.osu.Framework that still targets net8.0; 2026.901.0+ require net10.0. -->
+    <OsuFrameworkVersion>2026.807.0</OsuFrameworkVersion>
+  </PropertyGroup>
+</Project>
